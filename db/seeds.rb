@@ -5,3 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Card.destroy_all
+# User.destroy_all
+# Deck.destroy_all
+
+# puts 'Starts seeding Cards'
+
+# Cards = Card.create([
+#     {
+#         question: 'What are arrow functions?',
+#         answer: '',
+#         image: ''
+#     },
+#     {
+#         question: ''
+#         answer:
+#         image:
+#     },
+#     {
+#         question:
+#         answer:
+#         image:
+#     },
+#     {
+#         question:
+#         answer:
+#         image:
+#     },
+#     {
+#         question:
+#         answer:
+#         image:
+#     }
+    
+#     ])
