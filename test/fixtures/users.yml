@@ -4,10 +4,8 @@ one:
   name: MyString
   username: MyString
   email: MyString
-  score: 1
 
 two:
   name: MyString
   username: MyString
   email: MyString
-  score: 1

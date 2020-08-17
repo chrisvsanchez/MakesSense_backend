@@ -4,7 +4,7 @@ class CreateCards < ActiveRecord::Migration[6.0]
       t.string :question
       t.string :answer
       t.string :instruction
-      t.string :image
+      t.belongs_to :deck, null: false, foreign_key: true
 
       t.timestamps
     end
