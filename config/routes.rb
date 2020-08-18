@@ -11,6 +11,7 @@ patch "/cards/:id", to: "cards#update"
 #DECK ROUTES ======================================================================================================
 get "/decks", to: "decks#index" 
 get "/decks/:id", to: "decks#show"
+post "/decks", to:"decks#create"
 
 #USER ROUTES=======================================================================================================
 post '/users/login', to: "users#login"

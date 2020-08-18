@@ -9,4 +9,10 @@ class DecksController < ApplicationController
         deck = Deck.find_by(id: params[:id])
         render json: deck 
     end
+
+    def create
+       deck = Deck.create(title: params[:title], subject: params[:subject], user_id: params[:user_id])
+       deck.save
+       render json: deck
+    end
 end
