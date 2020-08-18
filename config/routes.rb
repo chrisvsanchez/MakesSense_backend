@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   #VERB, "/url". to: "CONTROLLER_NAME#METHOD_NAME"
 
 #CARD ROUTES ======================================================================================================
-
-
+patch "/cards/:id", to: "cards#update"
 
 #DECK ROUTES ======================================================================================================
 get "/decks", to: "decks#index" 
