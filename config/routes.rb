@@ -13,6 +13,9 @@ get "/decks", to: "decks#index"
 get "/decks/:id", to: "decks#show"
 
 #USER ROUTES=======================================================================================================
+post '/users/login', to: "users#login"
+get '/users', to: "users#index"
+get '/users/:id', to: "users#show"
 
 
 

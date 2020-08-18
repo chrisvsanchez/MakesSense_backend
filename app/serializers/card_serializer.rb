@@ -1,3 +1,4 @@
 class CardSerializer < ActiveModel::Serializer
-  attributes :id, :answer
+  attributes :id, :answer, :deck
+  
 end
