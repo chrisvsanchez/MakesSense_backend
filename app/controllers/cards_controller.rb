@@ -1,5 +1,10 @@
 class CardsController < ApplicationController
 
+    def index
+        cards = Card.all 
+        render json: cards
+    end
+
     def update
         card = Card.find_by(id: params[:id])
         # # if (){
@@ -16,6 +21,12 @@ class CardsController < ApplicationController
     def destroy
         card = Card.find_by(id: params[:id])
         card.destroy
+        render json: card
+    end
+
+    def create
+        card = Card.create( question: params[:question], instruction: params[:instruction], answer: params[:answer], deck_id: params[:deck_id])
+       
         render json: card
     end
 end

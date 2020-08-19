@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 patch "/cards/:id", to: "cards#update"
 get "cards/:id", to: "cards#show"
 delete "cards/:id", to: "cards#destroy"
+post "cards/", to: "cards#create"
+get "cards/", to: "cards#index"
 
 
 
