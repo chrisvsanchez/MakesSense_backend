@@ -12,7 +12,10 @@ class DecksController < ApplicationController
 
     def create
        deck = Deck.create(title: params[:title], subject: params[:subject], user_id: params[:user_id])
-       render json: deck
+
+        render json: deck
+           
+  
     end
 
     def destroy
