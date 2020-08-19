@@ -7,11 +7,18 @@ Rails.application.routes.draw do
 
 #CARD ROUTES ======================================================================================================
 patch "/cards/:id", to: "cards#update"
+get "cards/:id", to: "cards#show"
+delete "cards/:id", to: "cards#destroy"
+
+
 
 #DECK ROUTES ======================================================================================================
 get "/decks", to: "decks#index" 
 get "/decks/:id", to: "decks#show"
-post "/decks", to:"decks#create"
+post "/decks", to: "decks#create"
+delete "/decks/:id", to: "decks#destroy"
+
+
 
 #USER ROUTES=======================================================================================================
 post '/users/login', to: "users#login"
