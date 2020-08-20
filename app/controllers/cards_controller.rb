@@ -4,16 +4,27 @@ class CardsController < ApplicationController
         cards = Card.all 
         render json: cards
     end
-
+    
     def update
+        words = ["function", "code", "backend", "frontend"]
         card = Card.find_by(id: params[:id])
-        # # if (){
-
-        # }
         card.update(answer: params[:answer])
-
-        render json: {card: CardSerializer.new(card), message: "candy" }
+        # The following does not function 
+        # let check_answer = params[:answer].select do |user_input| words.all?{ |word| user_input.include? word }
+        # if check_answer
+        #     result = " Your explaination was too technical"
+        # else 
+        #     result = "Great Job!"
+        # end
+#  The following code functions, only checking for 1 word
+        if params[:answer].include?( word = "function")
+            result= "Your explaination was too technical, you used the word #{word} "
+        else
+            result= "Great job!"
+        end
+        render json: {card: CardSerializer.new(card), message: result}
     end
+
     def show
         card = Card.find_by(id: params[:id])
         render json: card
