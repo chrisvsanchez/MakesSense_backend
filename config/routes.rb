@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # resources :users
 
   #VERB, "/url". to: "CONTROLLER_NAME#METHOD_NAME"
+# Sessions & Cookies
+get "/temp", to: "application#temp"
 
 #CARD ROUTES ======================================================================================================
 patch "/cards/:id", to: "cards#update"
