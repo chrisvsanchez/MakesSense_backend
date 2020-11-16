@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   # resources :cards
   # resources :decks
-  # resources :users
+
+  # Kelsey updating for sessions below, WAITING TO TALK TO CHRIS.
+  #  resources :users, only: [:create]
 
   #VERB, "/url". to: "CONTROLLER_NAME#METHOD_NAME"
+# Sessions & Cookies
+get "/temp", to: "application#temp"
 
 #CARD ROUTES ======================================================================================================
 patch "/cards/:id", to: "cards#update"
@@ -26,6 +30,9 @@ delete "/decks/:id", to: "decks#destroy"
 post '/users/login', to: "users#login"
 get '/users', to: "users#index"
 get '/users/:id', to: "users#show"
+
+
+
 
 
 
